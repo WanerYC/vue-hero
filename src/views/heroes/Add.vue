@@ -15,7 +15,7 @@
     </div>
 </template>
 <script>
-    import axios from 'axios';
+    // import axios from 'axios';
     // 绑定文本
     // 添加按钮注册事件
     // 发送ajax
@@ -30,8 +30,8 @@
         },
         methods:{
             handleAdd() {
-                axios
-                    .post('http://localhost:3000/heroes', this.formData)
+                this.$http
+                    .post('heroes', this.formData)
                     .then((res) => {
                         console.log(res);
                         const {status, data} = res;

@@ -49,8 +49,8 @@ import axios from 'axios';
         methods:{
             // 加载英雄列表
             loadData() {
-                axios
-                    .get('http://localhost:3000/heroes')
+                this.$http
+                    .get('heroes')
                     .then((res) => {
                         console.log(res);
                         const {status,data} = res;
@@ -64,8 +64,8 @@ import axios from 'axios';
                 if(!confirm('是否确认删除?')) {
                     return;
                 }
-                axios
-                    .delete(`http://localhost:3000/heroes/${id}`)
+                this.$http
+                    .delete(`heroes/${id}`)
                     .then((res) => {
                         console.log(res);
                         if(res.status ===200 ) {

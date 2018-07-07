@@ -41,8 +41,8 @@
         },
         methods:{
             loadData() {
-                axios   
-                    .get(`http://localhost:3000/heroes/${this.heroId}`)
+                this.$http   
+                    .get(`heroes/${this.heroId}`)
                     .then((res) => {
                         if(res.status === 200) {
                             this.formData = res.data;
@@ -50,8 +50,8 @@
                     })
             },
             handleEdit() {
-                axios   
-                    .put(`http://localhost:3000/heroes/${this.heroId}`, this.formData)
+                this.$http   
+                    .put(`heroes/${this.heroId}`, this.formData)
                     .then((res) => {
                         if(res.status === 200) {
                             console.log(this.$router);
