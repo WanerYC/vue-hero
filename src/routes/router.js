@@ -14,6 +14,7 @@ VUe.use(VueRouter);
 
 // 创建路由对象 配置路由规则
 const router = new VueRouter({
+    linkExactActiveClass: 'active',
     routes:[
         // 配置跟路径
         // {name:'home', path:'/', redirect:'/heroes'},

@@ -17,7 +17,9 @@
 //    module.exports
 export default {
     name: 'app',
-    data() {}
+    data() {
+      return {};
+    }
 }
    
    
