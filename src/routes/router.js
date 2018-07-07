@@ -11,6 +11,8 @@ import EquipList from '../views/equips/List.vue';
 
 // 引入添加英雄的组件
 import Add from '../views/heroes/Add.vue';
+// 引入修改英雄组件
+import Edit from '../views/heroes/Edit.vue';
 
 // 注册插件
 VUe.use(VueRouter);
@@ -27,7 +29,8 @@ const router = new VueRouter({
         {name:'heroes', path:'/heroes', component:HeroList},
         {name:'weapons', path:'/weapons', component:WeaponList},
         {name:'equips', path:'/equips', component:EquipList},
-        {name:'heroAdd', path:'/heroes/add', component:Add}
+        {name:'heroAdd', path:'/heroes/add', component:Add},
+        {name:'Edit', path:'/heroes/edit/:id', component:Edit}
     ]
 })
 
